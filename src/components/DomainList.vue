@@ -11,7 +11,7 @@
 					</div>
 				</div>
 				<br/>
-				<h5>Domínios <span class="badge badge-info">{{ domains.length }}</span></h5>
+				<h5>Nomes <span class="badge badge-info">{{ domains.length }}</span></h5>
 				<div class="card">
 					<div class="card-body">
 						<ul class="list-group">
@@ -22,7 +22,7 @@
 									</div>
 									<div class="col-md text-right">
 										<a class="btn btn-info" v-bind:href="domain.checkout" target="_blank">
-											<span class="fa fa-shopping-cart"></span>
+											<span class="fa fa-question"></span>
 										</a>
 									</div>
 								</div>
@@ -47,8 +47,8 @@ export default {
 	},
 	data: function () {
 		return {
-			prefixes: ["Air", "Jet", "Flight"],
-			sufixes: ["Hub", "Station", "Mart"]
+			prefixes: ["Tha", "Jo", "Ric"],
+			sufixes: ["eison", "lita", "ão", "zé"]
 		};
 	},
 	methods: {
@@ -71,8 +71,7 @@ export default {
 			for (const prefix of this.prefixes) {
 				for (const sufix of this.sufixes) {
 					const name = prefix + sufix;
-					const url = name.toLowerCase();
-					const checkout = `https://checkout.hostgator.com.br/?a=add&sld=${url}&tld=.com.br`;
+					const checkout = `https://servicodados.ibge.gov.br/api/v2/censos/nomes/${name}?groupBy=UF`;
 					domains.push({
 						name,
 						checkout

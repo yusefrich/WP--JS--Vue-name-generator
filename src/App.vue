@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div id="slogan" class="text-center">
-			<h1>NameGator</h1>
+			<h1>Brazilian name generator</h1>
 			<br/>
 			<h6 class="text-secondary">Gerador de nomes utilizando Vue.js, GraphQL e Node</h6>
 		</div>
@@ -13,6 +13,7 @@
 
 <script>
 import "bootstrap/dist/css/bootstrap.css";
+import "./assets/styles/bootstrap-theme.min.css";
 import "font-awesome/css/font-awesome.css";
 import DomainList from "./components/DomainList";
 
@@ -29,8 +30,8 @@ export default {
 			prefix: "",
 			sufix: "",
 
-			prefixes: ["Air", "Jet", "Flight"],
-			sufixes: ["Hub", "Station", "Mart"]
+			prefixes: ["Tha", "Jo", "Ric"],
+			sufixes: ["eison", "lita", "ão", "zé"]
 		};
 	},
 	methods: {
